@@ -21,3 +21,9 @@ import org.junit.runner.RunWith;
 public class runner {
     //Projemizin BEYNİDİR!!!
 }
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/yukselnevfel/APPIUM_CUCUMBER.git
+git push -u origin main
