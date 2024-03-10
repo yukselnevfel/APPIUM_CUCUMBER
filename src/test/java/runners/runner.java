@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = {"src/test/resources/features","src/test/resources/apiFeatures"},
         glue = "stepdefinitions",
         tags = "@abu",
-        dryRun =false
+        dryRun =true
         /* Eger dry run degerimiz true ise bu adim bize features bulanan tag ait olan kisimdaki eksik adimlari yani tanimlanmayan
       adimlari bize soyler. Eger adimlar tanimlanmissa tekrar calistirildigin testimiz passed olur ama bu adimlarda eksik adim olmadigini
       gosterir yani aslinda testimizin passed oldugunu gostermez!
@@ -21,9 +21,3 @@ import org.junit.runner.RunWith;
 public class runner {
     //Projemizin BEYNİDİR!!!
 }
-git init
-git add .
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/yukselnevfel/APPIUM_CUCUMBER.git
-git push -u origin main

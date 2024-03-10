@@ -46,7 +46,7 @@ public class AileButcemPage {
     @FindBy(xpath = "(//*[@class='android.widget.EditText'])[1]")
     public WebElement aciklamaKutusu;
     @FindBy(xpath = "(//*[@class='android.widget.EditText'])[2]")
-    public WebElement TutarKutusu;
+    public WebElement tutarKutusu;
 
 
 

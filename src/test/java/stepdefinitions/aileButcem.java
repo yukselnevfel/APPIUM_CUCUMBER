@@ -51,10 +51,36 @@ public class aileButcem {
     }
     @Given("hesabim sayfasindaki bilgileri degistirerek {string} {string} {string} {string} {string} degisikleri kaydedin ve dogrulayin")
     public void hesabim_sayfasindaki_bilgileri_degistirerek_degisikleri_kaydedin(String isim, String soyisim, String sehir, String yas,String meslek) {
-        aileButcemPage.textBoxVeriGirme(isim,soyisim,sehir,yas,meslek);
-        aileButcemPage.textBoxKontrol(isim,soyisim,sehir,yas,meslek);
+        aileButcemPage.textBoxVeriGirme(ConfigReader.getProperty(isim),ConfigReader.getProperty(soyisim),ConfigReader.getProperty(sehir),ConfigReader.getProperty(yas),ConfigReader.getProperty(meslek));
+        aileButcemPage.textBoxKontrol(ConfigReader.getProperty(isim),ConfigReader.getProperty(soyisim),ConfigReader.getProperty(sehir),ConfigReader.getProperty(yas),ConfigReader.getProperty(meslek));
 
 
     }
+    @Given("kullanici uygulamayi kapatir")
+    public void kullanici_uygulamayi_kapatir() {
+        Driver.quitAppiumDriver();
+    }
 
+    //2.Senaryo
+    @Given("anasayfadaki arti {int} {int} {int} butonuna tiklayin")
+    public void anasayfadaki_arti_butonuna_tiklayin(int x,int y,int bekleme) throws InterruptedException {
+        ReusableMethods.koordinatTiklamaMethodu(x,y,bekleme);
+    }
+    @Given("{string} bolumune tiklayin")
+    public void gelir_ekle_bolumune_tiklayin(String gelirText) {
+        ReusableMethods.scrollWithUiScrollable(gelirText);
+    }
+    @Given("Gelir Ekle bolumunde {string},{string},{string},{string} {string},{int} {int} tarih ve tutari belirleyin ve kaydedin")
+    public void aciklama_gelir_tip_kategori_tarih_ve_tutari_belirleyin_ve_kaydedin(String ilkKutu,String gelirTip,String kategori) {
+        aileButcemPage.aciklamaKutusu.sendKeys(ilkKutu);
+        ReusableMethods.scrollWithUiScrollable(gelirTip);
+        ReusableMethods.scrollWithUiScrollable(kategori );
+
+
+    }
+    @Given("basariyla eklendigini dogrulayin")
+    public void basariyla_eklendigini_dogrulayin() {
+
+
+    }
 }
