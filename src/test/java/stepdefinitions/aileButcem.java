@@ -70,17 +70,34 @@ public class aileButcem {
     public void gelir_ekle_bolumune_tiklayin(String gelirText) {
         ReusableMethods.scrollWithUiScrollable(gelirText);
     }
-    @Given("Gelir Ekle bolumunde {string},{string},{string},{string} {string},{int} {int} tarih ve tutari belirleyin ve kaydedin")
-    public void aciklama_gelir_tip_kategori_tarih_ve_tutari_belirleyin_ve_kaydedin(String ilkKutu,String gelirTip,String kategori) {
+    @Given("Gelir Ekle bolumunde {string},{string},{string},{string} {string},{int}, {int}, {int} tarih {int}, {int}, {int} ve tutari {string} belirleyin ve kaydedin")
+    public void aciklama_gelir_tip_kategori_tarih_ve_tutari_belirleyin_ve_kaydedin(String ilkKutu,String gelirTipKutusu,String gelirTuru, String kategoriKutusu,String kategoriTuru,int xtakvim,int ytakvim, int bekleme,int xtarih,int ytarih,int wait,String tutar) throws InterruptedException {
         aileButcemPage.aciklamaKutusu.sendKeys(ilkKutu);
-        ReusableMethods.scrollWithUiScrollable(gelirTip);
-        ReusableMethods.scrollWithUiScrollable(kategori );
-
+        ReusableMethods.scrollWithUiScrollable(gelirTipKutusu);
+        ReusableMethods.wait(1);
+        ReusableMethods.scrollWithUiScrollable(gelirTuru);
+        ReusableMethods.scrollWithUiScrollable(kategoriKutusu );
+        ReusableMethods.scrollWithUiScrollable(kategoriTuru);
+        ReusableMethods.wait(1);
+        ReusableMethods.koordinatTiklamaMethodu(xtakvim,ytakvim,bekleme);
+        aileButcemPage.nextMontIconu.click();
+        ReusableMethods.wait(1);
+        ReusableMethods.koordinatTiklamaMethodu(xtarih,ytarih,wait);
+        aileButcemPage.takvimOkButtonu.click();
+        ReusableMethods.wait(1);
+        aileButcemPage.biletTutarKutusu.sendKeys(tutar);
+        ReusableMethods.wait(1);
+        aileButcemPage.biletKayitButtonu.click();
+        ReusableMethods.wait(2);
 
     }
     @Given("basariyla eklendigini dogrulayin")
     public void basariyla_eklendigini_dogrulayin() {
+       Assert.assertTrue( aileButcemPage.gelirEklendiText.isDisplayed());
+
 
 
     }
+
+
 }

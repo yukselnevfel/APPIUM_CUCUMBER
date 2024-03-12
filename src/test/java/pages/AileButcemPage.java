@@ -48,6 +48,20 @@ public class AileButcemPage {
     @FindBy(xpath = "(//*[@class='android.widget.EditText'])[2]")
     public WebElement tutarKutusu;
 
+    @FindBy(xpath = "//*[@resource-id='android:id/next']")
+    public WebElement nextMontIconu;
+    @FindBy(xpath = "//*[@resource-id='android:id/prev']")
+    public WebElement prevMontIconu;
+    @FindBy(xpath = "//*[@text='Tutar']")
+    public WebElement biletTutarKutusu;
+    @FindBy(xpath = "//*[@text='Kaydet']")
+    public WebElement biletKayitButtonu;
+    @FindBy(xpath = "//*[@text='Gelir eklendi.']")
+    public WebElement gelirEklendiText;
+    @FindBy(xpath = "//*[@text='OK']")
+    public WebElement takvimOkButtonu;
+
+
 
 
 
