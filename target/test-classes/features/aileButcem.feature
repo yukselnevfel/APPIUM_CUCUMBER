@@ -25,6 +25,20 @@ Feature: Kullanici aile butcem gorevlerini gerceklestirir
       * basariyla eklendigini dogrulayin
       * kullanici uygulamayi kapatir
 
+@gider
+    Scenario:
+      * anasayfadaki arti butonuna tiklayin
+      * Gider Ekle bölümüne tıklayın
+      * Gider Ekle sayfasinda Acıklama kısmına gider türünü girin
+      * Gider Ekle sayfasında Gider Tipini Düzenli olarak secin
+      * Gider Ekle sayfasinda Gider Periyodunu Aylık olarak secin
+      * Gider Ekle sayfasinda Kategori tipini Diğer olarak secin
+      * Gider Ekle sayfasında tarih ve gün secimi yapilir
+      * Gider Ekle sayfasında tutar bilgisi girilir
+      * Kaydet buttonuna tıklanir
+      * Basariyla kaydedildiği dogrulanir.
+      * kullanici uygulamayi kapatir
+
 
 
 

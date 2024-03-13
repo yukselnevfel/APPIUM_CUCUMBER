@@ -119,4 +119,16 @@ public class AileButcemPage {
         ReusableMethods.scrollWithUiScrollable("Giriş Yap");
     }
 
+    public void tarihEkranKaydirmaMethodu(int for1,int forSart,int x1,int y1,int wait,int x2,int y2,int bekleme) throws InterruptedException {
+        for (int i = for1; i < forSart; i++) {
+            ReusableMethods.scrollScreenMethod(x1, y1, wait, x2, y2, bekleme);
+
+        }
+    }
+
+    public void setTarihKutusu(int x1,int y1,int beklemeSuresi) throws InterruptedException {
+        ReusableMethods.koordinatTiklamaMethodu(x1,y1,beklemeSuresi);
+
+    }
+
 }

@@ -99,5 +99,50 @@ public class aileButcem {
 
     }
 
+    //Practise
+
+
+    @Given("anasayfadaki arti butonuna tiklayin")
+    public void anasayfadaki_arti_butonuna_tiklayin() {
+
+    }
+    @Given("Gider Ekle bölümüne tıklayın")
+    public void gider_ekle_bölümüne_tıklayın() {
+
+    }
+    @Given("Gider Ekle sayfasinda Acıklama kısmına gider türünü girin")
+    public void gider_ekle_sayfasinda_acıklama_kısmına_gider_türünü_girin() {
+
+    }
+    @Given("Gider Ekle sayfasında Gider Tipini Düzenli olarak secin")
+    public void gider_ekle_sayfasında_gider_tipini_düzenli_olarak_secin() {
+
+    }
+    @Given("Gider Ekle sayfasinda Gider Periyodunu Aylık olarak secin")
+    public void gider_ekle_sayfasinda_gider_periyodunu_aylık_olarak_secin() {
+
+    }
+    @Given("Gider Ekle sayfasinda Kategori tipini Diğer olarak secin")
+    public void gider_ekle_sayfasinda_kategori_tipini_diğer_olarak_secin() {
+
+    }
+    @Given("Gider Ekle sayfasında tarih ve gün secimi yapilir")
+    public void gider_ekle_sayfasında_tarih_ve_gün_secimi_yapilir() {
+
+    }
+    @Given("Gider Ekle sayfasında tutar bilgisi girilir")
+    public void gider_ekle_sayfasında_tutar_bilgisi_girilir() {
+
+    }
+    @Given("Kaydet buttonuna tıklanir")
+    public void kaydet_buttonuna_tıklanir() {
+
+    }
+    @Given("Basariyla kaydedildiği dogrulanir.")
+    public void basariyla_kaydedildiği_dogrulanir() {
+
+    }
+
+
 
 }
