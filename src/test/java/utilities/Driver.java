@@ -16,8 +16,8 @@ public class Driver {
     private static AndroidDriver<AndroidElement> appiumDriver;
     // private static  IOSDriver<IOSElement> iosDriver;
 
-    static final String TELEFONADI="PIXEL 2";
-    static final String ANDROIDVERSION="10.0";
+    static final String TELEFONADI="Samsung";
+    static final String ANDROIDVERSION="11.0";
     static final String PLATFORM="Android";
     static final String OTOMASYON_ISMI="UiAutomator2";
 

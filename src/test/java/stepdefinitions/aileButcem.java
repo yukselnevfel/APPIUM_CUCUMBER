@@ -19,17 +19,13 @@ public class aileButcem {
     @Given("ilk ekran ayarlarini yapin {int} {int} {int} {int} {int} {int} {int} {int} ve ardindan login {string} sayfasina ulasin")
     public void ilk_ekran_ayarlarini_yapin_ve_ardindan_login_sayfasina_ulasin(int for1,int forSart,int x1,int y1,int wait,int x2,int y2,int bekleme,String girisText) throws InterruptedException {
         // 946,1005 waitAction  150,1005
-        ReusableMethods.wait(8);
-        /*
-        for (int i=for1; i<forSart; i++){
-            ReusableMethods.scrollScreenMethod(x1,y1,wait,x2,y2,bekleme);
+        ReusableMethods.wait(10);
 
-        }
-        ReusableMethods.scrollWithUiScrollable(girisText);
+        aileButcemPage.ilkEkranOrtakAdimlari(for1,forSart,x1,y1,wait,x2,y2,bekleme,girisText);
 
-         */
+
         //2.yol
-        aileButcemPage.ilkEkranAyarlamalari();
+      // aileButcemPage.ilkEkranAyarlamalari();
     }
     @Given("{string} ve {string} bilgilerini girerek kullanici bilgileriyle {string} giris yapin")
     public void mail_ve_password_bilgilerini_girerek_kullanici_bilgileriyle_giris_yapin(String mail,String sifre,String girisYap) {
@@ -102,44 +98,73 @@ public class aileButcem {
     //Practise
 
 
-    @Given("anasayfadaki arti butonuna tiklayin")
-    public void anasayfadaki_arti_butonuna_tiklayin() {
+
+    @Given("Gider Ekle sayfasinda {string} kısmına {string} girin")
+    public void gider_ekle_sayfasinda_acıklama_kısmına_girin(String aciklamaKutusu,String string) {
+        ReusableMethods.scrollWithUiScrollable(aciklamaKutusu);
+        aileButcemPage.aciklamaKutusu.sendKeys(string);
+
 
     }
-    @Given("Gider Ekle bölümüne tıklayın")
-    public void gider_ekle_bölümüne_tıklayın() {
+    @Given("Gider Ekle sayfasında {string} {string} olarak secin")
+    public void gider_ekle_sayfasında_gider_tipini_olarak_secin(String giderKutusu,String giderTipi) {
+        ReusableMethods.wait(2);
+        ReusableMethods.scrollWithUiScrollable(giderKutusu);
+        ReusableMethods.wait(1);
+        ReusableMethods.scrollWithUiScrollable(giderTipi);
 
     }
-    @Given("Gider Ekle sayfasinda Acıklama kısmına gider türünü girin")
-    public void gider_ekle_sayfasinda_acıklama_kısmına_gider_türünü_girin() {
+    @Given("Gider Ekle sayfasinda {string} {string} olarak secin")
+    public void gider_ekle_sayfasinda_gider_periyodunu_olarak_secin(String giderPeriyod,String giderAylik) {
+        ReusableMethods.scrollWithUiScrollable(giderPeriyod);
+        ReusableMethods.wait(2);
+        ReusableMethods.scrollWithUiScrollable(giderAylik);
+        ReusableMethods.wait(2);
 
     }
-    @Given("Gider Ekle sayfasında Gider Tipini Düzenli olarak secin")
-    public void gider_ekle_sayfasında_gider_tipini_düzenli_olarak_secin() {
+    @Given("Gider Ekle sayfasinda Kategori {int} {int} {int} tıklayın ve kategori tipi {string} olarak secin")
+    public void gider_ekle_sayfasinda_kategori_tipini_olarak_secin(int x,int y,int bekle, String deger) throws InterruptedException {
+        ReusableMethods.koordinatTiklamaMethodu(x,y,bekle);
+        ReusableMethods.scrollWithUiScrollable(deger);
+        ReusableMethods.wait(2);
 
     }
-    @Given("Gider Ekle sayfasinda Gider Periyodunu Aylık olarak secin")
-    public void gider_ekle_sayfasinda_gider_periyodunu_aylık_olarak_secin() {
+    @Given("Gider Ekle sayfasında {int} ve {string} secimi yapilir")
+    public void gider_ekle_sayfasında_ve_secimi_yapilir(int deger, String gün) {
+        aileButcemPage.aileButTarihKutusu.click();
+        for (int i = 0; i <deger; i++) {
+            aileButcemPage.nextMontIconu.click();
+        }
+        ReusableMethods.scrollWithUiScrollable(gün);
+        ReusableMethods.wait(1);
+        aileButcemPage.takvimTamamButtonu.click();
+
+
 
     }
-    @Given("Gider Ekle sayfasinda Kategori tipini Diğer olarak secin")
-    public void gider_ekle_sayfasinda_kategori_tipini_diğer_olarak_secin() {
+    @Given("Gider Ekle sayfasında {string} {string} girilir")
+    public void gider_ekle_sayfasında_girilir(String tutar,String miktar) {
+        ReusableMethods.scrollWithUiScrollable(tutar);
+        ReusableMethods.wait(2);
 
+        if (driver.isKeyboardShown()) {
+            driver.getKeyboard().pressKey(miktar);
+        } else {
+            aileButcemPage.biletTutarKutusu.sendKeys(miktar);
+        }
+        ReusableMethods.wait(3);
     }
-    @Given("Gider Ekle sayfasında tarih ve gün secimi yapilir")
-    public void gider_ekle_sayfasında_tarih_ve_gün_secimi_yapilir() {
 
-    }
-    @Given("Gider Ekle sayfasında tutar bilgisi girilir")
-    public void gider_ekle_sayfasında_tutar_bilgisi_girilir() {
-
-    }
-    @Given("Kaydet buttonuna tıklanir")
-    public void kaydet_buttonuna_tıklanir() {
+    @Given("{string} buttonuna tıklanir")
+    public void buttonuna_tıklanir(String kaydet) {
+        ReusableMethods.scrollWithUiScrollable(kaydet);
 
     }
     @Given("Basariyla kaydedildiği dogrulanir.")
-    public void basariyla_kaydedildiği_dogrulanir() {
+    public void basariyla_eklendigini_dogrulanir() {
+        Assert.assertTrue( aileButcemPage.giderEklendiText.isDisplayed());
+
+
 
     }
 

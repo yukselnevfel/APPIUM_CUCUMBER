@@ -1,8 +1,8 @@
-@abu
+
 Feature: Kullanici aile butcem gorevlerini gerceklestirir
 
   Background:
-    * ilk ekran ayarlarini yapin 0 6 946 1005 750 150 1005 500 ve ardindan login "Giriş Yap" sayfasina ulasin
+    * ilk ekran ayarlarini yapin 0 6 556 815 750 71 815 500 ve ardindan login "Giriş Yap" sayfasina ulasin
     * "email" ve "password" bilgilerini girerek kullanici bilgileriyle "Giriş Yap" giris yapin
     * uygulamaya kullanici bilgileriyle giris yapildigini dogrulayin
 
@@ -27,15 +27,15 @@ Feature: Kullanici aile butcem gorevlerini gerceklestirir
 
 @gider
     Scenario:
-      * anasayfadaki arti butonuna tiklayin
-      * Gider Ekle bölümüne tıklayın
-      * Gider Ekle sayfasinda Acıklama kısmına gider türünü girin
-      * Gider Ekle sayfasında Gider Tipini Düzenli olarak secin
-      * Gider Ekle sayfasinda Gider Periyodunu Aylık olarak secin
-      * Gider Ekle sayfasinda Kategori tipini Diğer olarak secin
-      * Gider Ekle sayfasında tarih ve gün secimi yapilir
-      * Gider Ekle sayfasında tutar bilgisi girilir
-      * Kaydet buttonuna tıklanir
+      * anasayfadaki arti 360 1419 0 butonuna tiklayin
+      * "Gider Ekle" bolumune tiklayin
+      * Gider Ekle sayfasinda "Açıklama" kısmına "aylık giderler" girin
+      * Gider Ekle sayfasında "Gider Tipi" "Düzenli" olarak secin
+      * Gider Ekle sayfasinda "Gider Periyodu" "Aylık" olarak secin
+      * Gider Ekle sayfasinda Kategori 643 899 1000 tıklayın ve kategori tipi "Diğer" olarak secin
+      * Gider Ekle sayfasında 2 ve "15" secimi yapilir
+      * Gider Ekle sayfasında "Tutar" "3000" girilir
+      * "Kaydet" buttonuna tıklanir
       * Basariyla kaydedildiği dogrulanir.
       * kullanici uygulamayi kapatir
 

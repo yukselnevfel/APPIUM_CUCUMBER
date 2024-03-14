@@ -61,6 +61,19 @@ public class AileButcemPage {
     @FindBy(xpath = "//*[@text='OK']")
     public WebElement takvimOkButtonu;
 
+    @FindBy(xpath = "//*[@text='Gider Ekle']")
+    public WebElement giderEkleText;
+
+    @FindBy(xpath = "//*[@text='Gider eklendi.']")
+    public WebElement giderEklendiText;
+    @FindBy(xpath = "(//*[@class='android.view.ViewGroup'])[13]")
+    public WebElement aileButTarihKutusu;
+    @FindBy(xpath = "(//*[@class='android.widget.ImageView'])[4]")
+    public WebElement kategoriGirmeIconu;
+
+    @FindBy(xpath = "//*[@text='TAMAM']")
+    public WebElement takvimTamamButtonu;
+
 
 
 
@@ -113,7 +126,7 @@ public class AileButcemPage {
 
     public void ilkEkranAyarlamalari() throws InterruptedException {
         for (int i=0; i<6; i++){
-            ReusableMethods.scrollScreenMethod(946,1005,750,150,1005,500);
+            ReusableMethods.scrollScreenMethod(679,679,750,50,679,500);
 
         }
         ReusableMethods.scrollWithUiScrollable("Giriş Yap");

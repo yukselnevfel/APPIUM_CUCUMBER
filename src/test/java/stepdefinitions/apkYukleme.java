@@ -16,9 +16,9 @@ public class apkYukleme {
     @Given("Kullanici apk dosya yolunu girerek {string} uygulamayi cep telefonuna yukler")
     public void kullanici_apk_dosya_yolunu_girerek_uygulamayi_cep_telefonuna_yukler(String apkDosyaYolu) throws MalformedURLException {
         DesiredCapabilities capabilities=new DesiredCapabilities();
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"Pixel 2");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"Samsung");
         // capabilities.setCapability("deviceName","Pixel 2");
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"10.0");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"11.0");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UiAutomator2");
         capabilities.setCapability(MobileCapabilityType.APP,apkDosyaYolu);
